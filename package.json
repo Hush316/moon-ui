@@ -10,6 +10,7 @@
     "test": "vitest",
     "lint": "eslint --fix --ext .ts,.vue src",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.vue\"",
+    "test:run": "vitest run",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
@@ -42,6 +43,8 @@
     "vitest": "0.21.1"
   },
   "dependencies": {
+    "@commitlint/cli": "17.0.2",
+    "@commitlint/config-conventional": "17.0.2",
     "plugin-vue^3.0.4": "link:@vitejs/plugin-vue^3.0.4",
     "typescript": "3.9.4",
     "unocss": "0.45.6",
