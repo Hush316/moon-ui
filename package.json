@@ -46,7 +46,7 @@
   "dependencies": {
     "@commitlint/cli": "17.0.2",
     "@commitlint/config-conventional": "17.0.2",
-    "plugin-vue^3.0.4": "link:@vitejs/plugin-vue^3.0.4",
+    "plugin-vue": "^3.0.4",
     "typescript": "3.9.4",
     "unocss": "0.45.6",
     "vue": "^3.2.37"
