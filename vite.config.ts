@@ -9,30 +9,30 @@ const rollupOptions = {
   external: ['vue', 'vue-router'],
   output: {
     globals: {
-      vue: 'Vue',
-    },
-  },
+      vue: 'Vue'
+    }
+  }
 }
 export default defineConfig({
   plugins: [vue(), vueJsx(), Unocss()],
   build: {
     rollupOptions,
-    minify: false,
+    minify: 'terser',
+    sourcemap: true,
     cssCodeSplit: true,
     lib: {
       entry: './src/entry.ts',
       name: 'MoonUI',
       fileName: 'moon-ui',
       // 导出模块格式
-      formats: ['es', 'esm', 'umd', 'iife'],
-    },
-  },
-  test:{
-    globals:true,
-    environment:'happy-dom',
-    transformMode:{
-      web:[/.[tj]sx$/]
+      formats: ['es', 'esm', 'umd', 'iife']
     }
-
+  },
+  test: {
+    globals: true,
+    environment: 'happy-dom',
+    transformMode: {
+      web: [/.[tj]sx$/]
+    }
   }
 })

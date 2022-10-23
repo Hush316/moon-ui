@@ -17,28 +17,28 @@ export const props = {
   // 新增
   size: {
     type: String as PropType<ISize>,
-    default: 'medium',
+    default: 'medium'
   },
 
   color: {
     type: String as PropType<IColor>,
-    default: 'blue',
+    default: 'blue'
   },
 
   round: {
     type: Boolean,
-    default: false,
+    default: false
   },
 
   plain: {
     type: Boolean,
-    default: false,
+    default: false
   },
 
   icon: {
     type: String,
-    default: '',
-  },
+    default: ''
+  }
 } as const
 
 export default defineComponent({
@@ -49,18 +49,18 @@ export default defineComponent({
       small: {
         x: '2',
         y: '1',
-        text: 'sm',
+        text: 'sm'
       },
       medium: {
         x: '3',
         y: '1.5',
-        text: 'base',
+        text: 'base'
       },
       large: {
         x: '4',
         y: '2',
-        text: 'lg',
-      },
+        text: 'lg'
+      }
     }
 
     return () => (
@@ -78,7 +78,8 @@ export default defineComponent({
           hover:text-white
           transition duration-300 ease-in-out transform hover:scale-105
           mx-1
-          `}>
+          `}
+      >
         {props.icon !== '' ? (
           <i class={`i-ic-baseline-${props.icon} p-3`}></i>
         ) : (
@@ -87,5 +88,5 @@ export default defineComponent({
         {slots.default ? slots.default() : ''}
       </button>
     )
-  },
+  }
 })

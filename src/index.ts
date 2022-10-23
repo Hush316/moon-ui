@@ -1,6 +1,6 @@
-import { createApp } from "vue/dist/vue.esm-browser";
-import MoonUI from "./entry";
-import "./index.css";
+import { createApp } from 'vue/dist/vue.esm-browser'
+import MoonUI from './entry'
+import './index.css'
 createApp({
   template: `
        <div  style="margin-bottom:20px;">
@@ -39,7 +39,7 @@ createApp({
        <SButton color="yellow" round plain icon="message"></SButton>
        <SButton color="red" round plain icon="delete"></SButton>
    </div>
-       `,
+       `
 })
   .use(MoonUI)
-  .mount("#app");
+  .mount('#app')
